@@ -81,6 +81,7 @@ def correlation(df: DataFrame, metrics):
 def plot_coeffs(df, metrics):
     for metric in metrics:
         f_df = df.query(f"{metric}_pvalue < 0.05")
+        # remove outliers
 
         fig: Figure
         ax1: Axes

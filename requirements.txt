@@ -16,3 +16,4 @@ jupyter
 nbconvert
 prompt_toolkit
 openpyxl
+PyInquirer

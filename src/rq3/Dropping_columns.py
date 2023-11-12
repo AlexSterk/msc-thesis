@@ -2,7 +2,7 @@ import pandas as pd
 
 # Step 1: Read in a CSV file using Pandas
 # Load your survey responses into a Pandas DataFrame
-df = pd.read_csv("data/rq3/censored/flagged_responses.csv", header=[0,1,2])
+df = pd.read_csv("data/rq3/censored/censored.csv", header=[0,1,2])
 
 # Step 2: Iterate over the columns
 columns_to_discard = []
@@ -20,7 +20,7 @@ for col in df.columns:
 # Step 3: Output a new file with selected columns removed
 df_filtered = df.drop(columns=columns_to_discard)
 # Define your output file
-output_file = 'data/rq3/censored/removed_columns.csv'
+output_file = 'data/rq3/censored/censored_2.csv'
 df_filtered.to_csv(output_file, index=False)
 
 print(f"\nFiltered data has been saved to {output_file}")
